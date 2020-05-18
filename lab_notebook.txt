@@ -1,2 +1,5 @@
 18/05 - 2020
+
 I set up my github repository
+. I Have downloaded the samplefile and extracted it. Using git bash I 
+wrote the first 100 lines of the content to a textfile for viewing and gain an understanding.
