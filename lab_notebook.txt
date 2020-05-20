@@ -3,3 +3,10 @@
 I set up my github repository
 . I Have downloaded the samplefile and extracted it. Using git bash I 
 wrote the first 100 lines of the content to a textfile for viewing and gain an understanding.
+
+20/05 - 2020
+I have started thinking how to remove all the redundant information in the file, aswell as a way
+to rename all identifiers without mishaps.
+I wrote a test shell-script trim.sh to remove column 3,4,5 and 9 because they wont be useful, and remove 
+contigs that are 100% overlaps. If length_of_overlap = end_of_overlap - start_of_overlap then its removed.
+Test file which is the head 1000 lines was reduced to 463 lines.
