@@ -10,3 +10,17 @@ to rename all identifiers without mishaps.
 I wrote a test shell-script trim.sh to remove column 3,4,5 and 9 because they wont be useful, and remove 
 contigs that are 100% overlaps. If length_of_overlap = end_of_overlap - start_of_overlap then its removed.
 Test file which is the head 1000 lines was reduced to 463 lines.
+
+22/05 - 2020
+I have found a way to replace the string identifiers with unique integer identifiers. After using trim.sh 
+on the data I run uniqs.sh on the trimmed file, which picks out all unique string identifiers from column 1
+and 2 and adds it to a file. Then on that file i run sort -u "file" | uniqe -u > "newfile". Inside the new file
+I will have all valid and uniqe identifiers. After doing that on the dataset it is reduced to 8084469 unique and
+valid identifers.
+
+I did some testing with my new scripts on the head 2000 lines from the data set to replace the identifiers with 
+integers using replacetest.sh. However the script is slow and needs improvements before I attack the dataset.
+
+I created test java classes called Graph2000.java and graphIO2000.java to put the data into a graph. From there 
+I checked the length of the adjecency lists and made sure the code works. I am sure there will be problems with
+the whole dataset which is why the classes are named *2000.java and are customized for smaller sized sets.
