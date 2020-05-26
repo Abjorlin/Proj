@@ -1,13 +1,11 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
 
 
 public class Graph2000 {
 
 	int V;
-	boolean adj;
-	double probability;
 	LinkedList<Integer>[] adjList;
 
 
@@ -34,17 +32,31 @@ public class Graph2000 {
     }
 	
 
-	
- 
-	public LinkedList<Integer> printAdjList(int index) { 
+
+	public LinkedList<Integer> AdjList(int index) { 
         return adjList[index];
     }
 	
-	public int printAdjListLen(int index) { 
+	public int AdjListLen(int index) { 
         return adjList[index].size();
     }
 	
-
 	
+	public void degreeDistribution() {
+				
+		ArrayList<Integer> arr = new ArrayList<Integer>();
+		
+		for (int i=1; i<948; i++) {
+			arr.add(AdjListLen(i));
+		}
+
+		Set<Integer> distinct = new HashSet<>(arr);
+		for (int s: distinct) {
+			System.out.println(s + " degrees occurs " + Collections.frequency(arr, s) + " times.");
+		}
+		
+	}
+	
+
 	
 }

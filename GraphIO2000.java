@@ -6,9 +6,9 @@ public class GraphIO2000 {
 
 	static public void main(String args[]) throws FileNotFoundException {
 		
-		Graph2000 graph = new Graph2000(2010);
+		Graph2000 graph = new Graph2000(2000);
 		
-			
+		
 		File file = new File("C:\\Users\\Axel\\eclipse-workspace\\Proj\\src\\datatrim2000.txt");
 		Scanner scan = new Scanner(file);
 		
@@ -21,12 +21,15 @@ public class GraphIO2000 {
 		}
 
 		scan.close();
-		
-		for (int i=0; i<950; i++) {
-			System.out.print(graph.printAdjListLen(i) + "\n");
+		/*
+		for (int i=0; i<948; i++) {
+			System.out.print(graph.AdjListLen(i) + "\n");
 		}
 		
-		System.out.print(graph.printAdjListLen(162));
+		System.out.print(graph.AdjListLen(162));
+		*/
+		
+		graph.degreeDistribution(); 
 	}
 	
 }

@@ -24,3 +24,11 @@ integers using replacetest.sh. However the script is slow and needs improvements
 I created test java classes called Graph2000.java and graphIO2000.java to put the data into a graph. From there 
 I checked the length of the adjecency lists and made sure the code works. I am sure there will be problems with
 the whole dataset which is why the classes are named *2000.java and are customized for smaller sized sets.
+
+26/05 - 2020
+After trying the script replace.sh on the head 50000 lines it took around 14 minutes, and my guess is that the
+code has a quadratic timecomplexity, which makes it useless for that big dataset. So i need to find a new 
+approach. In Eclipse I tried Integer.parseInt("Identifier", 36) and Identifier.hashCode() without success.
+
+I wrote a new function in graph2000.java called degreeDistribution() that prints the node degree distribution.
+
