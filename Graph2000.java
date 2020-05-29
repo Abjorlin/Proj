@@ -4,14 +4,14 @@ import java.util.*;
 
 
 public class Graph2000 {
-
+	
+	
 	int V;
 	LinkedList<Integer>[] adjList;
-
-
+	 
+		
 	Graph2000() {
 	}
-	
 	
 	
 	Graph2000(int n) {
@@ -31,7 +31,9 @@ public class Graph2000 {
 		adjList[dest].add(src);
     }
 	
-
+	public int numVertex() {
+		return this.V;
+	}
 
 	public LinkedList<Integer> AdjList(int index) { 
         return adjList[index];
@@ -46,7 +48,7 @@ public class Graph2000 {
 				
 		ArrayList<Integer> arr = new ArrayList<Integer>();
 		
-		for (int i=1; i<948; i++) {
+		for (int i=0; i<V; i++) {
 			arr.add(AdjListLen(i));
 		}
 
@@ -57,6 +59,20 @@ public class Graph2000 {
 		
 	}
 	
-
 	
-}
+	
+	int countVertex() { 
+        int sum = 0; 
+  
+        for (int i = 0; i < this.V; i++) { 
+            sum += adjList[i].size(); 
+        }
+        return sum; 
+    } 
+	
+	
+	 
+} 
+
+
+

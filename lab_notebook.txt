@@ -32,3 +32,13 @@ approach. In Eclipse I tried Integer.parseInt("Identifier", 36) and Identifier.h
 
 I wrote a new function in graph2000.java called degreeDistribution() that prints the node degree distribution.
 
+29/05 - 2020
+I solved the identifier nameing process today. In my GraphIO2000.java I read a trimmed file with string 
+identifiers, convert them using hashCode(). Then I put the hashCode value as a key inside a hashtable
+with its value to x where x enumerates from 0 to n.
+
+I have started to write ConnectedComponents.java that counts the number of components aswell as their 
+individual size using depth first search. It does not function properly yet.
+
+
+
