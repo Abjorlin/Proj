@@ -48,30 +48,15 @@ public class Graph2000 {
 				
 		ArrayList<Integer> arr = new ArrayList<Integer>();
 		
-		for (int i=0; i<V; i++) {
+		for (int i=0; i<this.V; i++) {
 			arr.add(AdjListLen(i));
 		}
 
 		Set<Integer> distinct = new HashSet<>(arr);
 		for (int s: distinct) {
-			System.out.println(s + " degrees occurs " + Collections.frequency(arr, s) + " times.");
+			System.out.println(s + " degrees occur " + Collections.frequency(arr, s) + " times.");
 		}
-		
 	}
-	
-	
-	
-	int countVertex() { 
-        int sum = 0; 
-  
-        for (int i = 0; i < this.V; i++) { 
-            sum += adjList[i].size(); 
-        }
-        return sum; 
-    } 
-	
-	
-	 
 } 
 
 
