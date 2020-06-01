@@ -50,8 +50,8 @@ error free run.
 After the first run it outputted that there contained 6207 nodes with 0 degrees, which is suspicious since there
 are not supposed to be any nodes eith 0 degrees at all. I figured out that in the hashing I used .hashCode() to 
 transform the strings, which I thought would save space, but they actually caused collisions since there are more 
-possibilities of strings than 2^31 integers. So inside the hashtable i store the string identifiers as objects
-with the keys enumerating from 0 to n.
+possibilities of strings than 2^31 integers. So inside the hashtable i store the string identifiers as keys
+with the values enumerating from 0 to n.
 
 01/06 - 2020
 Added a line to print the number of components and changed the numberofnodes.txt in result_data to 
