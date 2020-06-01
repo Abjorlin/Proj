@@ -56,8 +56,8 @@ public class GraphIO2000 {
 		
 		graph.degreeDistribution();
 		cc.componentSizeDistribution();
-		System.out.println("Total amount of nodes: " + cc.amountOfNodes());
-		System.out.println(i);
+		System.out.println("Amount of components: " + cc.count());
+		System.out.println("Amount of nodes: " + i);
 		
 		
 	}
